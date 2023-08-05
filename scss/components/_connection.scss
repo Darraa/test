@@ -1,0 +1,37 @@
+@import "./form";
+
+.connection{
+    &__title{
+        padding-bottom: 20px;
+    }
+    &__content{
+        @include flexbox( $jc: space-between);
+
+        &-img{
+            width: 60%;
+        }
+    }
+}
+
+@media screen and (max-width: 1110px) {
+    .connection{
+        .form{
+            width: 50%;
+        }
+        &__content{
+            justify-content: center;
+            gap: 1em;
+            &-img{
+                width: 80%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .connection{
+        .form{
+            width: 100%;
+        }
+    }
+}

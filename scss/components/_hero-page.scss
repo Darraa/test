@@ -1,0 +1,83 @@
+.hero-page {
+    @include flexbox($ai: center, $jc: space-between);
+    position: relative;
+    &__content {
+        @include flexbox($dir: column);
+        gap: 5em;
+        &-btns {
+            @include flexbox();
+            gap: 1.25rem;
+
+            .btn-nav {
+                &__item {
+                    border: 1px solid #F2F2F2;
+                    background: #F9F9F9;
+                    padding: 10px;
+                    cursor: pointer;
+                    svg{
+                        fill: rgba(51, 51, 51, 1);
+                        stroke-width: 1px;
+                    }
+
+                    &:hover{
+                        background-color: #BDBDBD;
+                        border-color: transparent;
+                        opacity: .8;
+                        transition: .5s;
+                    }
+                }
+            }
+        }
+
+        &-num {
+            span{
+                color: #BDBDBD;
+                font-size: 24px;
+                line-height: 24px; 
+                padding-right: 1em;
+            }
+        }
+    }
+
+    &__img {
+        position: relative;
+        width: 45%;
+
+        &-btn {
+            position: absolute;
+            bottom: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .hero-page{
+        &__content{
+            position: absolute;
+            z-index: 1;
+            top: 0;
+
+            &-title,&-num{
+                span{
+                    color: #333;
+                }
+            }
+        }
+        &__img{
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 470px) {
+    .hero-page{
+        &__content{
+            gap: 2em;
+        }
+        &__img{
+            &-btn{
+                position: static;
+            }
+        }
+    }
+}

@@ -1,0 +1,99 @@
+.form {
+    width: 30%;
+
+    &__item {
+        position: relative;
+
+        &-input {
+            width: 95%;
+            outline: none;
+            background-color: #F3F3F3;
+            padding: 15px;
+            margin-bottom: 10px;
+        }
+
+        textarea {
+            resize: none;
+            height: 150px;
+        }
+
+        span {
+            position: absolute;
+            top: 0;
+            padding: 15px;
+
+            z-index: 1;
+            color: #8D8D8D;
+        }
+
+        .req::before {
+            content: "";
+        }
+
+        .req::after {
+            content: "*";
+            color: #C30000;
+        }
+
+        .checkbox {
+            &__input {
+                display: none;
+            }
+
+            .checkbox__input:checked+.checkbox__label::after {
+                transform: scale(1);
+            }
+
+            &__label {
+                position: relative;
+                color: #333;
+                font-size: 14px;
+                line-height: 140%;
+                display: inline-flex;
+                align-items: center;
+                margin-bottom: 10px;
+                cursor: pointer;
+
+                &::before {
+                    content: "";
+                    align-self: flex-start;
+                    margin-right: 10px;
+                    flex: 0 0 24px;
+                    height: 24px;
+                    background-color: #fff;
+                    border: 1px solid #333;
+                    border-radius: 4px;
+                }
+
+                &::after {
+                    content: "";
+                    width: 18px;
+                    height: 18px;
+                    position: absolute;
+                    top: 4px;
+                    left: 4px;
+                    background-image: url('../../img/check.png');
+                    background-position: center;
+                    border-radius: 4px;
+                    transform: scale(0);
+                    transition: transform 0.3s ease 0s;
+                }
+            }
+        }
+    }
+
+    &__btn{
+        background-color: #333;
+        span{
+            color: #fff;
+        }
+        svg{
+            fill: #fff;
+        }
+    }
+}
+
+
+.hide {
+    display: none;
+}

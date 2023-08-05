@@ -1,0 +1,61 @@
+footer{
+    background-color:  #2C2C2C;
+    .footer {
+        padding: 5%;
+        @include flexbox($jc:space-around);
+        color: #fff;
+
+        &__info, &__contact{
+            li{
+                padding: 16px 0;
+                
+                a{
+                    color: #fff;
+                    
+                    svg{
+                        fill: #fff;
+                    }
+                    
+                    &:hover{
+                        opacity: .6;
+                        transition: .5s;
+                    }
+                }
+            }
+        }
+
+        &__social{
+            &-list{
+                @include flexbox();
+                gap: 2.5rem;
+                padding-top: 16px;
+                svg{
+                    fill: #fff;
+                }
+            }
+        }
+    }
+
+    .copyright{
+        padding: 2%;
+        border-top: 1px solid #c8c8c880;
+        color: rgba(200, 200, 200, 0.502);
+        text-align: center
+    }
+}
+
+
+@media screen and (max-width: 780px) {
+    footer{
+        .footer{
+            flex-direction: column;
+            gap: 2em;
+
+            &__info, &__contact{
+                li{
+                    padding: 10px 0;
+                }
+            }
+        }
+    }
+}

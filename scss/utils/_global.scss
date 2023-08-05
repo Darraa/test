@@ -1,0 +1,94 @@
+body {
+    font-family: 'MainFont';
+    color: #333;
+
+}
+
+section {
+    padding: 9.375%;
+
+    &:first-child {
+        padding-top: 0;
+    }
+
+    &:last-child() {
+        padding: 0;
+    }
+}
+
+.img-container {
+    max-width: 100%;
+    height: auto;
+    display: block;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    gap: 10px;
+    padding: 20px 40px;
+    background: #FFF;
+    cursor: pointer;
+
+    span {
+        font-size: 12px;
+        line-height: 12px;
+        letter-spacing: 2.4px;
+    }
+
+    &:hover {
+        background-color: #BDBDBD;
+        transition: .5s;
+    }
+}
+
+.title {
+    color: #BDBDBD;
+    font-family: 'Light';
+    font-size: calc(30px + 34 *(100vw/1440));
+    line-height: 60px;
+
+    &__footer {
+        font-size: 16px;
+        font-family: 'Bold';
+        color: #FFF;
+    }
+}
+
+.bold {
+    color: #333;
+    font-family: 'Bold';
+}
+
+.num {
+    font-family: 'Num';
+    color: #F2F2F2;
+    font-size: calc(100px + 100 *(100vw/1440));
+    font-weight: 900;
+}
+
+.svg {
+    &__facebook:hover {
+        fill: #1877F2;
+    }
+
+    &__twitter:hover {
+        fill: #1DA1F2;
+    }
+
+    &__linkedin:hover {
+        fill: #0A66C2;
+    }
+
+    &__pinterest:hover {
+        fill: #E60023;
+    }
+
+}

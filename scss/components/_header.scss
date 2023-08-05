@@ -1,0 +1,32 @@
+    .header {
+        @include flexbox($jc: space-around, $ai: center);
+        padding: 30px;
+
+        &__logo {
+            a{
+
+                @include flexbox($dir: column);
+            }
+        }
+
+        &__nav {
+            &-list {
+                @include flexbox();
+                gap: 3.75rem;
+
+                li {
+                    a {
+                        color: #333;
+                        font-size: 12px;
+                        line-height: 12px;
+                        letter-spacing: 2.4px;
+                    }
+
+                    &:nth-child(1) {
+                        border-top: 1px solid #333;
+                        border-bottom: 1px solid #333;
+                    }
+                }
+            }
+        }
+    }

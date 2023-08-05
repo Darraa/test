@@ -1,0 +1,36 @@
+.projects {
+    &__title{
+        padding-bottom: 30px;
+    }
+    &__list {
+        @include flexbox($jc: center);
+        gap: 20px;
+        &-item {
+            &:first-child{
+                padding: 3.9% 5.3%;
+                background-image: linear-gradient(0deg, rgba(51, 51, 51, 0.8), rgba(51, 51, 51, 0.8)), url("../../img/project-bg.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+
+                .title{
+                    color: #fff;
+                }
+
+                .btn{
+                    background: none;
+                    color: #fff;
+                    padding: 0;
+                    margin-top: 14px;
+                    svg{
+                        fill: #fff;
+                    }
+
+                    &:hover{
+                        opacity: .4;
+                        transition: .8s;
+                    }
+                }
+            }
+        }
+    }
+}

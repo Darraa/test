@@ -1,0 +1,35 @@
+.task {
+    &__list {
+        @include flexbox($jc: space-between);
+        gap: 20px;
+
+        &-item{
+            @include flexbox( $ai: center);
+            gap: 20px;
+            width: 40%;
+            p{
+                font-size: calc(14px + 5 *(100vw/1440));
+                font-style: normal;
+                font-weight: 400;
+                line-height: 30px;
+            }
+
+            &:last-child{
+                width: 45%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1260px) {
+    .task{
+        &__list{
+            &-item{
+                width: 90%;
+                &:last-child{
+                    width: 90%;
+                }
+            }
+        }
+    }
+}
